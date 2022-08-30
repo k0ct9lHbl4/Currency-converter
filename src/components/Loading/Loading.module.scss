@@ -1,0 +1,45 @@
+.root {
+  margin: 0px auto;
+  margin-top: 20px;
+  height: 50px;
+  max-width: 550px;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+
+  svg {
+    position: relative;
+    top: 5px;
+    right: 10px;
+    animation: rotate 2s linear infinite;
+    width: 26px;
+    height: 26px;
+
+    circle {
+      stroke: #16b67f;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+}
